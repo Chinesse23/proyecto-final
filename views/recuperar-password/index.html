@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recuperar Contraseña</title>
+    <link rel="stylesheet" href="/css/login.css">
+    <link rel="icon" href="/assets/favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <div class="box">
+        <div class="container glass">
+            <div class="top-header">
+                <span>Posada Choroni</span>
+                <header>Recuperar Contraseña</header>
+            </div>
+            <div class="alert-box" id="alertBox" style="display: none;"></div>
+            <form id="recoverForm">
+                <div class="input-field">
+                    <input type="email" class="input" id="email" name="email" placeholder="Correo Electrónico" required>
+                    <i class="bx bx-envelope"></i>
+                </div>
+                <div class="input-field">
+                    <input type="submit" class="submit" value="Recuperar Contraseña">
+                </div>
+            </form>
+            <div class="bottom">
+                <div class="left">
+                    <label><a href="/login">Iniciar sesión</a></label>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="/js/recover.js"></script>
+</body>
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Panel</title>
+    <link rel="stylesheet" href="/css/admin.css">
+    <link rel="icon" href="/assets/favicon-admin.ico" type="image/x-icon">
+    <link href='https://cdn.jsdelivr.net/npm/fullcalendar@5.11.0/main.min.css' rel='stylesheet' />
+    <script src='https://cdn.jsdelivr.net/npm/fullcalendar@5.11.0/main.min.js'></script>
+    <script src="https://unpkg.com/scrollreveal"></script>
+</head>
+<body>
+    <button id="toggleSidebarButton" onclick="toggleSidebar()" class="sidebar-toggle">
+        <span id="arrow">&#9664;</span>
+    </button>
+    <div class="sidebar" id="sidebar">
+        <h2>Admin Panel</h2>
+        <nav>
+            <a href="#inicio" class="active">Inicio</a>
+            <a href="/login/index.html">Cerrar Sesión</a>
+        </nav>
+    </div>
+    <div class="content">
+        <section id="inicio">
+            <h2>Posadas</h2>
+            <table id="posadasTable">
+                <thead>
+                    <tr>
+                        <th>Nombre</th>
+                        <th>Dirección</th>
+                        <th>Contacto</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Datos de las posadas -->
+                </tbody>
+            </table>
+            <button onclick="addPosada()">Agregar Posada</button>
+
+            <h2>Ventas</h2>
+            <table id="ventasTable">
+                <thead>
+                    <tr>
+                        <th>Cliente</th>
+                        <th>Monto</th>
+                        <th>Moneda</th>
+                        <th>Estado</th>
+                        <th>Fecha</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Datos de las transacciones -->
+                </tbody>
+            </table>
+            <button onclick="addTransaction()">Agregar Transacción</button>
+            <canvas id="ventasChart"></canvas>
+
+            <h2>Actividades</h2>
+            <div id="calendar"></div>
+            <table id="actividadesTable">
+                <thead>
+                    <tr>
+                        <th>Nombre</th>
+                        <th>Fecha</th>
+                        <th>Descripción</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Datos de las actividades -->
+                </tbody>
+            </table>
+            <button onclick="addActividad()">Agregar Actividad</button>
+        </section>
+    </div>
+    <script src="/js/admin.js"></script>
+</body>
+</html>

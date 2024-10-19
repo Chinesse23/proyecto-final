@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Excursiones en Choroní</title>
+    <link rel="stylesheet" href="/css/css/excursiones.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <link rel="icon" href="/assets/posada-favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <header>
+        <h1>Excursiones en Choroní</h1>
+    </header>
+    <main>
+        <section id="intro">
+            <div class="intro-content">
+                <h2>Bienvenidos a Choroní</h2>
+                <p>Descubre las mejores excursiones y actividades en Choroní, un paraíso tropical en Venezuela.</p>
+                <button onclick="window.location.href='contacto.html'">Contacto</button>
+            </div>
+        </section>
+        
+        <section id="excursiones">
+            <h2>Nuestras Excursiones</h2>
+            <div class="carousel">
+                <div class="carousel-item">
+                    <img src="/assets/excursion-1-choroni.jpg" alt="Playa Grande">
+                    <p>Playa Grande</p>
+                </div>
+                <div class="carousel-item">
+                    <img src="/assets/excursion-2-choroni.jpg" alt="Chuao">
+                    <p>Chuao</p>
+                </div>
+                <div class="carousel-item">
+                    <img src="/assets/excursiones-3-choroni.jpg" alt="Puerto Escondido">
+                    <p>Puerto Escondido</p>
+                </div>
+                <div class="carousel-item">
+                    <img src="/assets/excursiones-4-choroni.jpg" alt="Senderismo en la selva">
+                    <p>Senderismo en la selva</p>
+                </div>
+            </div>
+        </section>
+        <section id="mapa">
+            <h2>Mapa Interactivo</h2>
+            <div id="map"></div>
+        </section>
+
+        <section id="testimonios">
+            <h2>Testimonios</h2>
+            <div class="testimonios-carousel">
+                <button class="prev" onclick="moveCarousel(-1)">&#10094;</button>
+                <div class="testimonio">
+                    <p>"¡Una experiencia inolvidable! Las playas son espectaculares."</p>
+                    <p>- Juan Pérez</p>
+                </div>
+                <div class="testimonio">
+                    <p>"El senderismo en la selva fue increíble. Muy recomendado."</p>
+                    <p>- María García</p>
+                </div>
+                <div class="testimonio">
+                    <p>"Choroní es un lugar mágico. Las excursiones fueron perfectas."</p>
+                    <p>- Carlos López</p>
+                </div>
+                <div class="testimonio">
+                    <p>"La organización y los guías fueron excelentes. Volveré pronto."</p>
+                    <p>- Ana Martínez</p>
+                </div>
+                <button class="next" onclick="moveCarousel(1)">&#10095;</button>
+            </div>
+        </section>
+
+        <section id="galeria-fotos-videos">
+            <h2 class="centrado">Galería de Fotos y Videos</h2>
+            <div class="galeria">
+                <div class="foto">
+                    <img src="/assets/galeria-1-choroni.jpg" alt="Descripción de la foto 1">
+                    <p>Descripción breve de la foto 1</p>
+                </div>
+                <div class="foto">
+                    <img src="/assets/galeria-2-choroni.jpg" alt="Descripción de la foto 2">
+                    <p>Descripción breve de la foto 2</p>
+                </div>
+                <div class="foto">
+                    <img src="/assets/galeria-3-choroni.jpg" alt="Descripción de la foto 3">
+                    <p>Descripción breve de la foto 3</p>
+                </div>
+                <div class="foto">
+                    <img src="/assets/galeria-4-choroni.jpg" alt="Descripción de la foto 4">
+                    <p>Descripción breve de la foto 4</p>
+                </div>
+                <div class="foto">
+                    <img src="/assets/galeria-6-choroni.webp" alt="Descripción de la foto 5">
+                    <p>Descripción breve de la foto 5</p>
+                </div>
+                <div class="foto">
+                    <img src="/assets/galeria-5-choroni.webp" alt="Descripción de la foto 6">
+                    <p>Descripción breve de la foto 6</p>
+                </div>
+            </div>
+            <div class="video">
+                <h3>Video Destacado</h3>  
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/Z8yriusalJI" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+        </section>
+    </main>
+    <footer class="centrado">
+        <p>Copyright © 2024 Posada Choroni.</p>
+    </footer>
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script src="/js/excursiones.js"></script>
+</body>
+</html>

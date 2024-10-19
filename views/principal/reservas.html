@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reservas en Choroní</title>
+    <link rel="stylesheet" href="/css/css/reservas.css">
+    <script src="https://js.stripe.com/v3/"></script>
+    <script src="https://www.paypal.com/sdk/js?client-id=AVg8g_RlHlgtsrZzAAOydEQiBzMazdK64qtDXpVL_W51seq3K8i8NML6_jS6BpVKl20f6TIMJtuG3oag&currency=USD"></script>
+    <link rel="icon" href="/assets/posada-favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <header>
+        <h1>Reservas en Choroní</h1>
+    </header>
+    <main>
+        <section class="posada" id="turpial">
+            <h2>Posada Turpial</h2>
+            <div class="carousel">
+                <img src="/assets/reservas-choroni-img.jpg" alt="Posada Turpial 1">
+                <img src="/assets/reservas-choroni-2.jpg" alt="Posada Turpial 2">
+                <img src="/assets/reservas-choroni-3.jpg" alt="Posada Turpial 3">
+            </div>
+            <div class="services">
+                <img src="/assets/comica-choroni-icon.png" alt="Comida">
+                <img src="/assets/wifi-choroni.png" alt="WiFi">
+                <img src="/assets/estacionamiento-choroni-icon.png" alt="Estacionamiento">
+            </div>
+            <p>Incluye: Comida típica de Choroní, WiFi y estacionamiento. Incluye un baño para todas las habitaciones.</p>
+            <button class="reserve-btn" data-posada="turpial">Reservar</button>
+            <div class="rating">
+                <span class="star" data-value="5">★</span>
+                <span class="star" data-value="4">★</span>
+                <span class="star" data-value="3">★</span>
+                <span class="star" data-value="2">★</span>
+                <span class="star" data-value="1">★</span>
+            </div>
+            <div class="comment-section">
+                <textarea id="comment" placeholder="Deja tu comentario aquí..."></textarea>
+                <button class="submit-comment">Enviar</button>
+            </div>
+        </section>
+        <section class="posada" id="ranchos-de-chano">
+            <h2>Los Ranchos de Chano</h2>
+            <div class="carousel">
+                <img src="/assets/rancho-1.jpg" alt="Los Ranchos de Chano 1">
+                <img src="/assets/rancho-2.jpg" alt="Los Ranchos de Chano 2">
+                <img src="/assets/rancho-3.jpg" alt="Los Ranchos de Chano 3">
+            </div>
+            <div class="services">
+                <img src="/assets/comica-choroni-icon.png" alt="Comida">
+                <img src="/assets/wifi-choroni.png" alt="WiFi">
+                <img src="/assets/estacionamiento-choroni-icon.png" alt="Estacionamiento">
+            </div>
+            <p>Incluye: Comida típica de Choroní, WiFi y estacionamiento. Incluye un baño para todas las habitaciones.</p>
+            <button class="reserve-btn" data-posada="ranchos">Reservar</button>
+            <div class="rating">
+                <span class="star" data-value="5">★</span>
+                <span class="star" data-value="4">★</span>
+                <span class="star" data-value="3">★</span>
+                <span class="star" data-value="2">★</span>
+                <span class="star" data-value="1">★</span>
+            </div>
+            <div class="comment-section">
+                <textarea id="comment" placeholder="Deja tu comentario aquí..."></textarea>
+                <button class="submit-comment">Enviar</button>
+            </div>
+        </section>
+        <section class="posada" id="las-garcia">
+            <h2>Posada Las Garcia</h2>
+            <div class="carousel">
+                <img src="/assets/garcia-1.webp" alt="Posada Las Garcia 1">
+                <img src="/assets/garcia-2.jpg" alt="Posada Las Garcia 2">
+                <img src="/assets/garcia-3.jpg" alt="Posada Las Garcia 3">
+            </div>
+            <div class="services">
+                <img src="/assets/comica-choroni-icon.png" alt="Comida">
+                <img src="/assets/wifi-choroni.png" alt="WiFi">
+                <img src="/assets/estacionamiento-choroni-icon.png" alt="Estacionamiento">
+            </div>
+            <p>Incluye: Comida típica de Choroní, WiFi y estacionamiento. Incluye un baño para todas las habitaciones.</p>
+            <button class="reserve-btn" data-posada="garcia">Reservar</button>
+            <div class="rating">
+                <span class="star" data-value="5">★</span>
+                <span class="star" data-value="4">★</span>
+                <span class="star" data-value="3">★</span>
+                <span class="star" data-value="2">★</span>
+                <span class="star" data-value="1">★</span>
+            </div>
+            <div class="comment-section">
+                <textarea id="comment" placeholder="Deja tu comentario aquí..."></textarea>
+                <button class="submit-comment">Enviar</button>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>© 2024 Posada Choroni</p>
+    </footer>
+
+    <!-- Modal -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close">×</span>
+            <h2>Formulario de Reserva</h2>
+            <form id="reservation-form">
+                <label for="name">Nombre:</label>
+                <input type="text" id="name" name="name" required>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                <label for="dates">Fechas de Reserva:</label>
+                <input type="text" id="dates" name="dates" required>
+                <label for="posada">Posada:</label>
+                <input type="text" id="posada" name="posada" readonly>
+                <label for="rooms">Número de Habitaciones:</label>
+                <input type="number" id="rooms" name="rooms" min="1" max="10" required>
+                <label for="adults">Número de Adultos:</label>
+                <input type="number" id="adults" name="adults" min="1" max="10" required>
+                <label for="children">Número de Niños:</label>
+                <input type="number" id="children" name="children" min="0" max="10" required>
+                <label for="price">Precio Total:</label>
+                <input type="text" id="price" name="price" value="$50" readonly>
+                <p>Incluye: Comida típica de Choroní, WiFi y estacionamiento. Baño en cada cuarto y dos camas grandes.</p>
+                <div id="paypal-button-container"></div>
+                <button type="submit">Confirmar Reserva</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Result Modal -->
+    <div id="result-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">×</span>
+            <h2 id="result-message"></h2>
+        </div>
+    </div>
+
+    <script src="/js/reservas.js"></script>
+</body>
+</html>

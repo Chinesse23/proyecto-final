@@ -1,0 +1,91 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+  
+  header {
+    background-color: #4CAF50;
+    color: white;
+    text-align: center;
+    padding: 1rem 0;
+  }
+  
+  main {
+    flex: 1;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 2rem;
+  }
+  
+  #availability {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+  }
+  
+  .posada {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    width: 300px;
+    text-align: center;
+    transition: transform 0.3s;
+  }
+  
+  .posada:hover {
+    transform: scale(1.05);
+  }
+  
+  .posada img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+  }
+  
+  .posada h2 {
+    font-size: 1.5rem;
+    color: #333;
+    margin: 1rem 0;
+  }
+  
+  .posada p {
+    font-size: 1rem;
+    color: #666;
+    margin: 0 1rem 1rem;
+  }
+  
+  footer {
+    background-color: #4CAF50;
+    color: white;
+    text-align: center;
+    padding: 1rem 0;
+    position: static;
+    width: 100%;
+    bottom: 0;
+  }
+  
+  @media (min-width: 768px) {
+    main {
+      padding: 4rem;
+    }
+  
+    .posada {
+      width: 30%;
+    }
+  }
+  
+  @media (min-width: 1024px) {
+    .posada {
+      width: 30%;
+    }
+  }
+  

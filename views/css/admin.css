@@ -1,0 +1,153 @@
+body {
+  display: flex;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f5f5dc; /* Beige */
+  margin: 0;
+}
+
+.sidebar-toggle {
+  background-color: #8fbc8f; /* Verde claro */
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  border-radius: 5px;
+  z-index: 1000;
+  transition: all 0.3s ease;
+}
+
+.sidebar-toggle #arrow {
+  display: inline-block;
+  transition: transform 0.3s ease;
+}
+
+.sidebar {
+  width: 200px;
+  background-color: #8fbc8f; /* Verde claro */
+  padding: 15px;
+  height: 100vh;
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: all 0.3s ease;
+}
+
+.sidebar.hidden {
+  transform: translateX(-200px);
+}
+
+.content {
+  margin-left: 220px;
+  padding: 20px;
+  width: calc(100% - 220px);
+  font-family: 'Verdana', Geneva, sans-serif;
+  transition: all 0.3s ease;
+}
+
+.content.expanded {
+  margin-left: 20px;
+  width: calc(100% - 20px);
+}
+
+section {
+  margin-bottom: 40px;
+}
+
+section h2 {
+  margin-top: 0;
+  font-family: 'Times New Roman', Times, serif; /* Cambiado a una fuente más seria */
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+
+table, th, td {
+  border: 1px solid #ddd;
+}
+
+th, td {
+  padding: 8px;
+  text-align: left;
+  font-family: 'Arial', sans-serif;
+}
+
+th {
+  background-color: #8fbc8f; /* Verde claro */
+  color: white;
+}
+
+button {
+  background-color: #2e8b57; /* Verde oscuro */
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  font-family: 'Georgia', serif;
+}
+
+button:hover {
+  background-color: #3cb371; /* Verde medio */
+}
+
+a {
+  font-family: 'Arial', sans-serif;
+  color: #2e8b57;
+}
+
+a:hover {
+  color: #3cb371;
+  text-decoration: underline;
+}
+
+/* Estilos específicos para FullCalendar */
+#calendar {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.fc-header-toolbar {
+  background-color: #8fbc8f; /* Verde claro */
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.fc-daygrid-day {
+  transition: transform 0.2s, box-shadow 0.2s, background-color 0.2s;
+  cursor: pointer;
+}
+
+.fc-daygrid-day:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.fc-daygrid-day.selected {
+  background-color: yellow;
+}
+
+.fc-event {
+  background-color: #2e8b57; /* Verde oscuro */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 5px;
+}
+
+.fc-event:hover {
+  background-color: #3cb371; /* Verde medio */
+}
+
+.fc-daygrid-block-event .fc-event-main {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}

@@ -1,0 +1,251 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Poppins:wght@400;500;600;700&display=swap");
+
+:root {
+  --primary-color: #0f1a2c;
+  --secondary-color: #f6ac0f;
+  --text-dark: #0f172a;
+  --text-light: #64748b;
+  --extra-light: #f8fafc;
+  --white: #ffffff;
+  --green: #00ff00;
+  --dark-green: #388e3c;
+  --darker-green: #2e7d32;
+  --morado: #800080;
+  --azul-aqua: #00ffff;
+  --azul-ladrillo: #6495ed;
+  --beige: #f5f5dc;
+  --silver: #c0c0c0;
+  --max-width: 1200px;
+  --header-font: "Playfair Display", serif;
+}
+
+/* Estilos generales */
+body {
+    font-family: 'Playfair Display', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+header {
+    background-color: var(--beige);
+    color: var(--text-dark);
+    padding: 1em 0;
+    text-align: center;
+}
+
+h2 {
+    text-align: center;
+    margin-top: 1em;
+}
+
+.featured-classes, .instructors, .contact-form, .gallery, .calendar, .new-events-carousel {
+    max-width: 800px;
+    margin: 2em auto;
+    padding: 1em;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.featured-classes {
+    text-align: center;
+}
+
+.container {
+    display: flex;
+    justify-content: space-around;
+}
+
+.class-card {
+    flex: 1;
+    margin: 10px;
+    text-align: center;
+}
+
+.class-card img {
+    width: 100%;
+    height: auto;
+    max-width: 300px; /* Ajusta este valor según tus necesidades */
+    max-height: 200px; /* Ajusta este valor según tus necesidades */
+    object-fit: cover;
+}
+
+.surf-card img {
+    width: 100%;
+    height: auto;
+    max-width: 300px; /* Ajusta este valor según tus necesidades */
+    max-height: 200px; /* Ajusta este valor según tus necesidades */
+    object-fit: cover;
+}
+
+/* Estilos específicos para las tarjetas */
+.class-card, .instructor-card, .event-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 1em;
+}
+
+.class-card img, .instructor-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.contact-form form {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-form label, .contact-form input, .contact-form textarea, .contact-form button {
+    margin-bottom: 1em;
+}
+
+/* Estilos para la galería */
+.gallery-container {
+    display: flex;
+    justify-content: space-around;
+}
+
+.gallery-container img {
+    width: 30%;
+    height: auto;
+    border-radius: 10px;
+}
+
+/* Estilos para el calendario */
+.fc-daygrid-day {
+    transition: transform 0.2s, box-shadow 0.2s, background-color 0.2s;
+    cursor: pointer;
+}
+
+.fc-daygrid-day:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.fc-daygrid-day.selected {
+    background-color: yellow;
+}
+
+/* Estilos para el carrusel de eventos */
+.new-events-carousel {
+    position: relative;
+    max-width: 800px;
+    margin: 2em auto;
+    overflow: hidden;
+}
+
+.carousel-container {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel-slide {
+    display: flex;
+    min-width: 100%;
+    box-sizing: border-box;
+}
+
+.event-card {
+    flex: 1;
+    margin: 0 1em;
+    padding: 1em;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    border: none;
+    padding: 1em;
+    cursor: pointer;
+}
+
+.prev {
+    left: 0;
+}
+
+.next {
+    right: 0;
+}
+
+footer{
+    text-align: center;
+}
+
+/* Ajustes para pantallas grandes */
+@media (min-width: 1024px) {
+    .instructors {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .instructor-cards-container {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+    }
+
+    .instructor-card {
+        flex: 1;
+        margin: 1em;
+        text-align: center;
+    }
+
+    .instructor-card img {
+        max-height: 200px; /* Ajustar la altura máxima de las imágenes */
+    }
+
+    .class-card {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .class-card img {
+        max-width: 100%;
+    }
+
+    .container {
+        display: flex;
+    }
+
+    .class-card h3, .class-card p {
+        text-align: center;
+    }
+}
+
+/* Otras clases */
+.instructors, .contact-form, .gallery, .calendar, .new-events-carousel {
+    max-width: 800px;
+    margin: 2em auto;
+    padding: 1em;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilos para el feedback */
+.feedback {
+    margin-top: 1em;
+    padding: 1em;
+    border-radius: 5px;
+    display: none;
+}
+
+.feedback.success {
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+}
+
+.feedback.error {
+    background-color: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+}

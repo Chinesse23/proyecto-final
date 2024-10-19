@@ -1,0 +1,199 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Poppins:wght@400;500;600;700&display=swap");
+
+:root {
+  --primary-color: #0f1a2c;
+  --secondary-color: #f6ac0f;
+  --text-dark: #0f172a;
+  --text-light: #64748b;
+  --extra-light: #f8fafc;
+  --white: #ffffff;
+  --green: #00ff00;
+  --dark-green: #388e3c;
+  --darker-green: #2e7d32;
+  --morado: #800080;
+  --azul-aqua: #00ffff;
+  --azul-ladrillo: #6495ed;
+  --beige: #f5f5dc;
+  --silver: #c0c0c0;
+  --max-width: 1200px;
+  --header-font: "Playfair Display", serif;
+}
+
+*{
+    font-family: 'Playfair Display', sans-serif;
+}
+
+body{
+    background-image: url("/assets/login-header.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    opacity: 0.9; /* Aumenta la opacidad para hacer el fondo menos fuerte */
+}
+
+.box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 90vh;
+}
+
+.container{
+    width: 400px; /* Ajusta el ancho del cuadro */
+    display: flex;
+    flex-direction: column;
+    padding: 0 15px 0 15px;
+}
+
+span{
+    color: var(--beige);
+    font-size: small;
+    display: flex;
+    justify-content: center;
+    padding: 10px 0 15px 0;
+}
+
+header{
+    color: #fff;
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+    padding: 0 0 15px 0;
+}
+
+.input-field{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+}
+
+.input-field .input{
+    height: 45px;
+    width: 87%;
+    border: none;
+    outline: none;
+    border-radius: 30px;
+    color: var(--beige);
+    padding: 0 0 0 42px;
+    background: rgba(255,255,255,0.1);
+}
+
+i{
+    position: relative;
+    top: -31px;
+    left: 17px;
+    color:var(--green);
+}
+
+::-webkit-input-placeholder{
+    color:var(--extra-light);
+}
+
+.submit{
+    border: none;
+    border-radius: 30px;
+    font-size: 15px;
+    height: 45px;
+    outline: none;
+    width: 100%;
+    background: rgba(255,255,255,0.7);
+    cursor: pointer;
+    transition: .3s;
+}
+
+.submit:hover{
+    box-shadow: 1px 5px 7px 1px rgba(0, 0, 0, 0.2);
+}
+
+.bottom{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-size: small;
+    color: var(--beige);
+    margin-top: 10px;
+}
+
+.left{
+    display: flex;
+}
+
+label a{
+    color: var(--beige);
+    text-decoration: none;
+}
+
+/* Estilo para el cuadro cristalizado */
+.glass {
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    padding: 20px; /* Agregamos padding para que el contenido no esté pegado a los bordes */
+    width: 400px; /* Ajustamos el ancho al 100% */
+    max-width: 100%; /* Aseguramos que no se salga del contenedor */
+}
+
+/* Estilo específico para el cuadro cristalizado en la página de registro */
+.register-glass {
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    padding: 20px; /* Agregamos padding para que el contenido no esté pegado a los bordes */
+    width: 400px; /* Ajustamos el ancho al 100% */
+    max-width: 100%; /* Aseguramos que no se salga del contenedor */
+}
+
+/* Estilo para el cuadro cristalizado específico para el registro de admin */
+.register-admin-glass {
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    padding: 20px; /* Agregamos padding para que el contenido no esté pegado a los bordes */
+    width: 400px; /* Ajustamos el ancho al 100% */
+    max-width: 100%; /* Aseguramos que no se salga del contenedor */
+}
+
+/* Estilos para el cuadro de alerta */
+.alert-box {
+    background-color: rgba(255, 0, 0, 0.1);
+    color: #FF0000;
+    padding: 15px;
+    margin-bottom: 20px;
+    border: 1px solid #FF0000;
+    border-radius: 5px;
+    display: none;
+    text-align: center;
+    font-size: 14px;
+}
+
+.alert-box.success {
+    background-color: rgba(0, 255, 0, 0.1);
+    color: #00FF00;
+    border-color: #00FF00;
+}
+
+/* Estilos para el cuadro de alerta en el login */
+.login-alert-box {
+    background-color: rgba(255, 0, 0, 0.1);
+    color: #FF0000;
+    padding: 15px;
+    margin-bottom: 20px;
+    border: 1px solid #FF0000;
+    border-radius: 5px;
+    display: none;
+    text-align: center;
+    font-size: 14px;
+}
+
+.login-alert-box.success {
+    background-color: rgba(0, 255, 0, 0.1);
+    color: #00FF00;
+    border-color: #00FF00;
+}
